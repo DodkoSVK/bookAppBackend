@@ -1,0 +1,25 @@
+{
+  "name": "zadanie_2_books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:server": "nodemon index.js",
+    "dev:server": "nodemon index.js",
+    "start:client": "npm run start --prefix ../client",
+    "start:both": "concurrently \"npm run dev:server\" \"npm run start:client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.1"
+  }
+}
