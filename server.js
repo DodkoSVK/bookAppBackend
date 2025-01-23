@@ -29,6 +29,9 @@ app.use('/api/books', booksRouter);
 app.get('*', (req, res) => {
     res.status(404).send({message: `Stranka ${req.originalUrl} neexistuje`});
 })
-app.listen(secureOptions,port, () => {
-    console.log(`My Book management application listen on port: ${port}`);
+https.createServer(secureOptions, app).listen(port, () => {
+    console.log(`My Book management application is running on https://dodko.site:${port}`);
 });
+/*app.listen(secureOptions,port, () => {
+    console.log(`My Book management application listen on port: ${port}`);
+});*/
