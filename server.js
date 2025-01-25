@@ -20,10 +20,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.status(201).send({message: "Get / je funkcne."});
-});
-
 app.use('/api/books', booksRouter);
 
 app.get('*', (req, res) => {
